@@ -15,7 +15,6 @@ void savapi_global_init_prepare(SAVAPI_GLOBAL_INIT *global_init, unsigned int pr
     global_init->program_type = product_id;
     global_init->api_major_version = SAVAPI_API_MAJOR_VERSION;
     global_init->api_minor_version = SAVAPI_API_MINOR_VERSION;
-    printf("18");
     /* Set the following fields with empty string in order to use the default values */
     global_init->engine_dirpath = "";
     global_init->vdfs_dirpath = "";

@@ -11,7 +11,6 @@
 #include "DbConnector.h"
 
 static const int PORT = 6379;
-static const std::string& pwd = "moresec@sec";
 
 using namespace std;
 
@@ -27,7 +26,7 @@ bool DbConnector::connect() {
         cerr << "connect redis failed!" << endl;
         return false;
     }
-    reply_ = static_cast<redisReply *>(redisCommand(publish_context_, "AUTH %s", pwd.c_str()));
+    reply_ = static_cast<redisReply *>(redisCommand(publish_context_, "AUTH %s", configInfo.pwd.c_str()));
 
     if (reply_ == nullptr) {
         cerr << "connect redis failed" << endl;
@@ -35,7 +34,6 @@ bool DbConnector::connect() {
         return false;
     }
 
-    printf("AUTH publish_context_: %s\n", reply_->str);
 
     // 负责subscribe订阅消息的上下文连接
     subcribe_context_ = redisConnect(configInfo.host.c_str(), PORT);
@@ -45,11 +43,9 @@ bool DbConnector::connect() {
     }
 
     reply_ = static_cast<redisReply *>(redisCommand(subcribe_context_, "AUTH %s", configInfo.pwd.c_str()));
-    printf("AUTH subcribe_context_: %s\n", reply_->str);
 
     // 在单独的线程中，监听通道上的事件，有消息给业务层进行上报
     thread t([&]() {
-//        observer_channel_message();
         getTaskInfos();
     });
     t.detach();
@@ -136,17 +132,12 @@ void DbConnector::getTaskInfos() {
 
         switch(r->type) {
             case REDIS_REPLY_STRING:
-                printf("type:%s, reply->len:%d reply->str:%s\n", "REDIS_REPLY_STRING", r->len, r->str);
                 if (notify_message_handler_ != nullptr) {
                     cout << "execute notify_message_handler_" << endl;
                     notify_message_handler_(r->len, r->str);
                 }
                 break;
             case REDIS_REPLY_ARRAY:
-                printf("type:%s, reply->elements:%d\n", "REDIS_REPLY_ARRAY", r->elements);
-                for (int i = 0; i < r->elements; i++) {
-                    printf("%d: %s\n", i, r->element[i]->str);
-                }
                 break;
             default:
                 break;

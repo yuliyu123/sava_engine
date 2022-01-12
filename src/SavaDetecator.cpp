@@ -27,7 +27,6 @@ void SavaDetecator::init() {
     }
 
     savapi_instance_init_prepare(&instance_init_);
-    printf("Creating SAVAPI Library instance\n");
     ec = SAVAPI_create_instance(&instance_init_, &instance_);
     if (ec != SAVAPI_S_OK) {
         std::cout << "create instance failed with ec: " << ec << std::endl;
