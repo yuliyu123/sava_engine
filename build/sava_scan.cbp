@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="sava_scan"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/root/dev/sava_detecator/build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j2 -f &quot;/root/dev/sava_detecator/build/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j2 -f &quot;/root/dev/sava_detecator/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j2 -f &quot;/root/dev/sava_detecator/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j2 -f &quot;/root/dev/sava_detecator/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/root/dev/sava_detecator/build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j2 -f &quot;/root/dev/sava_detecator/build/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j2 -f &quot;/root/dev/sava_detecator/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j2 -f &quot;/root/dev/sava_detecator/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j2 -f &quot;/root/dev/sava_detecator/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/root/dev/sava_detecator/build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j2 -f &quot;/root/dev/sava_detecator/build/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j2 -f &quot;/root/dev/sava_detecator/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j2 -f &quot;/root/dev/sava_detecator/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j2 -f &quot;/root/dev/sava_detecator/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sava_scan">
+				<Option output="/root/dev/sava_detecator/bin/sava_scan" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/root/dev/sava_detecator/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_UNIX"/>
+					<Add option="-D_UNICODE"/>
+					<Add directory="/root/dev/sava_detecator"/>
+					<Add directory="/usr/local/include/hiredis"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j2 -f &quot;/root/dev/sava_detecator/build/Makefile&quot;  VERBOSE=1 sava_scan"/>
+					<CompileFile command="/usr/bin/gmake -j2 -f &quot;/root/dev/sava_detecator/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j2 -f &quot;/root/dev/sava_detecator/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j2 -f &quot;/root/dev/sava_detecator/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sava_scan/fast">
+				<Option output="/root/dev/sava_detecator/bin/sava_scan" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/root/dev/sava_detecator/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_UNIX"/>
+					<Add option="-D_UNICODE"/>
+					<Add directory="/root/dev/sava_detecator"/>
+					<Add directory="/usr/local/include/hiredis"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j2 -f &quot;/root/dev/sava_detecator/build/Makefile&quot;  VERBOSE=1 sava_scan/fast"/>
+					<CompileFile command="/usr/bin/gmake -j2 -f &quot;/root/dev/sava_detecator/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j2 -f &quot;/root/dev/sava_detecator/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j2 -f &quot;/root/dev/sava_detecator/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/root/dev/sava_detecator/main.cpp">
+			<Option target="sava_scan"/>
+		</Unit>
+		<Unit filename="/root/dev/sava_detecator/src/AesUtil.cpp">
+			<Option target="sava_scan"/>
+		</Unit>
+		<Unit filename="/root/dev/sava_detecator/src/AesUtil.h">
+			<Option target="sava_scan"/>
+		</Unit>
+		<Unit filename="/root/dev/sava_detecator/src/Base64.h">
+			<Option target="sava_scan"/>
+		</Unit>
+		<Unit filename="/root/dev/sava_detecator/src/CMakeLists.txt">
+			<Option target="sava_scan"/>
+		</Unit>
+		<Unit filename="/root/dev/sava_detecator/src/DbConnector.cpp">
+			<Option target="sava_scan"/>
+		</Unit>
+		<Unit filename="/root/dev/sava_detecator/src/DbConnector.h">
+			<Option target="sava_scan"/>
+		</Unit>
+		<Unit filename="/root/dev/sava_detecator/src/DbService.cpp">
+			<Option target="sava_scan"/>
+		</Unit>
+		<Unit filename="/root/dev/sava_detecator/src/DbService.h">
+			<Option target="sava_scan"/>
+		</Unit>
+		<Unit filename="/root/dev/sava_detecator/src/SavaDetecator.cpp">
+			<Option target="sava_scan"/>
+		</Unit>
+		<Unit filename="/root/dev/sava_detecator/src/SavaDetecator.h">
+			<Option target="sava_scan"/>
+		</Unit>
+		<Unit filename="/root/dev/sava_detecator/src/TaskRunner.cpp">
+			<Option target="sava_scan"/>
+		</Unit>
+		<Unit filename="/root/dev/sava_detecator/src/TaskRunner.h">
+			<Option target="sava_scan"/>
+		</Unit>
+		<Unit filename="/root/dev/sava_detecator/src/ThreadPool.h">
+			<Option target="sava_scan"/>
+		</Unit>
+		<Unit filename="/root/dev/sava_detecator/src/common.cpp">
+			<Option target="sava_scan"/>
+		</Unit>
+		<Unit filename="/root/dev/sava_detecator/src/common.h">
+			<Option target="sava_scan"/>
+		</Unit>
+		<Unit filename="/root/dev/sava_detecator/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
